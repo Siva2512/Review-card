@@ -450,12 +450,23 @@ body {
 
 /*responsive */
 
+
 /*tablet */
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1023px) {
 
   /* NAVBAR */
   .navbar {
-    padding: 10px 40px;
+    padding: 10px 50px;
+  }
+   .nav-item {
+    display: inline-flex;     /* shrink to text */
+    align-self: flex-start;   /* prevent center alignment */
+  }
+
+  .nav-indicator {
+    left: 0;
+    width: 100%;              /* now equals text width */
+    bottom: -6px;             /* snug under text */
   }
 
   .menu-toggle {
@@ -474,7 +485,15 @@ body {
   }
 
   /* HERO */
+
+
+.testimoials-hero {
+    padding: 120px 50px 60px; /* ✅ same start */
+  }
   .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0; 
     gap: 32px;
   }
 
@@ -484,14 +503,45 @@ body {
 
   /* REVIEWS */
   .review-grid {
-    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
   }
+  .review-section {
+  padding: 0 50px 100px;
+}
+   .review-card {
+    height: auto;   
+    display: flex;
+    flex-direction: column;
+    padding: 18px 24px 56px; 
+  }
+  .review-text{
+    font-size: 15px;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+   .review-footer {
+    position: absolute;
+    bottom: 16px;
+    left: 24px;
+    right: 24px;
+  }
+  
 
   /* FOOTER */
   .footer-container {
     padding: 0 40px;
   }
 }
+@media (min-width: 1024px) {
+  .review-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 
 
 /*Mobile */
@@ -567,16 +617,24 @@ body {
     gap: 32px;
     padding: 0;
   }
+    .section-tag {
+    font-size: 12px;
+    letter-spacing: 1.6px;
+  }
 
   .hero-title {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.25;
+    font-weight: 400;
+  }
+  .hero-title span {
+    font-style: italic;
   }
 
   .hero-desc {
     font-size: 14px;
     line-height: 1.6;
-    max-width: 90%;
+    max-width: 100%;
   }
 
   /* RATING */
@@ -608,6 +666,8 @@ body {
 
   .review-grid {
     grid-template-columns: 1fr;
+    justify-items: start;
+    padding-left: 0;
   }
 
   .review-card {
