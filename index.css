@@ -590,8 +590,14 @@ body {
     padding: 18px 20px;
   }
 
+ .rating-top {
+    justify-content: flex-start;
+  }
+
   .rating-score {
     gap: 12px;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   /* REVIEWS */
@@ -626,5 +632,6 @@ body {
     text-align: center;
   }
 }
+
 
 
