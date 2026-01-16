@@ -587,10 +587,11 @@ body {
 
   .rating {
     width: 100%;
-    padding: 18px 20px;
+    padding: 16px 20px;
+    text-align: left;
   }
 
- .rating-top {
+  .rating-top {
     justify-content: flex-start;
   }
 
@@ -632,6 +633,5 @@ body {
     text-align: center;
   }
 }
-
 
 
